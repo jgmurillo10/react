@@ -95,7 +95,7 @@ class App extends Component {
               <form onSubmit={this.handleSubmit}>
                 <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.user.displayName || this.state.user.email}/>
                 <input type="text" name="currentItem" placeholder="What are you bringin?" onChange={this.handleChange} value={this.state.currentItem}/>
-                <button>Add Item</button>
+                <button><i class="fa fa-plus" aria-hidden="true"></i></button>
               </form>
             </section>
             <section className="display-item">
@@ -109,7 +109,7 @@ class App extends Component {
                           <p>brought by: {item.user}</p>
                           {
                             item.user === this.state.user.displayName || item.user === this.state.user.email ?
-                            <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
+                            <button onClick={() => this.removeItem(item.id)}><i class="fa fa-minus  " aria-hidden="true"></i> </button>
                             :
                             ''
                           }
